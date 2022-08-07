@@ -1,0 +1,4 @@
+--class-path src
+--main Main
+--library json2object
+--neko bin/doen.n
