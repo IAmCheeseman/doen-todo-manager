@@ -60,7 +60,7 @@ class DoenList {
             case "show":
                 Sys.println(this);
             case _:
-                Sys.println("Invalid command.");
+                Sys.println(this);
 		}
 	}
 
