@@ -30,6 +30,7 @@ class DoenList {
 		switch action {
 			case "add":
 				addTask(args[1]);
+                Sys.println(this);
 			case "remove":
                 try {
                     var task = Std.parseInt(args[1]);
@@ -39,6 +40,7 @@ class DoenList {
                         Sys.println('Expected a number larger than 0.');
                     }
                     removeTask(task);
+                    Sys.println(this);
                 } catch (error) {
                     Sys.println('Expected an integer as an argument to "remove"');
                 }
@@ -51,6 +53,7 @@ class DoenList {
                         Sys.println('Expected a number larger than 0.');
                     }
                     finishTask(task);
+                    Sys.println(this);
                 } catch (error) {
                     Sys.println('Expected an integer as an argument to "finish"');
                 }
@@ -62,7 +65,14 @@ class DoenList {
 	}
 
 	public function removeTask(task:Int):Void {
-		_tasks.slice(task);
+        var newTasks = [];
+        for (i in 0..._tasks.length) {
+            if (i == task) {
+                continue;
+            }
+            newTasks.push(_tasks[i]);
+        }
+        _tasks = newTasks;
 	}
 
 	public function addTask(task:String):Void {

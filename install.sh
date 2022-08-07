@@ -1,21 +1,22 @@
 #! /usr/bin/bash
 
-echo "Installing hxcpp..."
-if command -v doas &> /dev/null
+if $1 != "skip"
 then
-    doas haxelib install hxcpp
-else 
-    sudo haxelib install hxcpp
-fi
+    echo "Installing hxcpp..."
+    if command -v doas &> /dev/null
+    then
+        doas haxelib install hxcpp
+    else 
+        sudo haxelib install hxcpp
+    fi
 
-
-
-echo "Installing json2object..."
-if command -v doas &> /dev/null
-then
-    doas haxelib install json2object
-else 
-    sudo haxelib install json2object
+    echo "Installing json2object..."
+    if command -v doas &> /dev/null
+    then
+        doas haxelib install json2object
+    else 
+        sudo haxelib install json2object
+    fi
 fi
 
 echo "Compiling to Neko..."
@@ -25,9 +26,9 @@ nekotools boot bin/doen.n
 echo "Moving the executable to /usr/bin/..."
 if command -v doas &> /dev/null
 then
-    doas mv ./bin/doen /usr/bin
+    doas cp ./bin/doen /usr/bin
 else 
-    sudo mv ./bin/doen /usr/bin
+    sudo cp ./bin/doen /usr/bin
 fi
 
 echo "Done!"
