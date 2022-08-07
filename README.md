@@ -1,5 +1,7 @@
-# doen-todo-manager
-A todo manager written in Haxe.
+# Doen Todo Manager
+A todo manager written in Haxe. Not meant for actual use, but install instructions are here nonetheless.
+
+![image](https://user-images.githubusercontent.com/64710123/183302338-d626b4fe-7f4d-45f4-bd97-cb8d67ade4b0.png)
 
 ## Installing
 
