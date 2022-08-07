@@ -85,8 +85,10 @@ class DoenList {
 
 	public function toString():String {
 		var out = "---- TODO ----";
+        var index = 0;
 		for (i in _tasks) {
-			out += "\n" + i;
+			out += '\nTask #$index ' + i;
+            index++;
 		}
 
 		return out;
