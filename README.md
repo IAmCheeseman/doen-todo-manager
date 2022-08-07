@@ -22,6 +22,8 @@ You need `haxe` and `haxelib` to compile, these will not be installed by `instal
 
 `json2object`
 
+`nekotools`
+
 </details>
 
 ## Commands
