@@ -13,7 +13,7 @@ sh install.sh
 
 `install.sh` will just install some dependencies, and then compile the project.
 
-You need `haxe` and `haxelibe` to compile, these will not be installed by `install.sh`.
+You need `haxe` and `haxelib` to compile, these will not be installed by `install.sh`.
 
 <details>
     <summary>Dependencies</summary>
